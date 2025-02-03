@@ -1,0 +1,27 @@
+ALGORITHM
+
+VAR
+    i,j,sum : INTEGER := 0;
+
+BEGIN
+    FOR i FROM 0 TO A.length-1 DO
+        FOR j FROM 0 TO B.length-1 DO //2 loops to iterate through both sets
+            IF (A[i] = B[j]) THEN
+                j := B.length-1 //skipping the entire index because it exists in the other set
+            ELSE_IF (j = B.length-1) AND (A[i] <> B[j]) THEN //if the counter is at the end and it found no duplicates then add it to sum
+                sum := sum + A[i];
+            END_IF
+        END_FOR
+    END_FOR
+
+    FOR i FROM 0 TO B.length DO  
+        FOR j FROM 0 TO A.length DO //Again but inverted the sets
+            IF (B[i] = A[j]) THEN
+                j := A.length-1;
+            ELSE_IF (j = A.length-1) AND (B[i] <> A[j]) THEN
+                sum := sum + B[i];
+            END_IF
+        END_FOR
+    END_FOR
+
+END

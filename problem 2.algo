@@ -1,0 +1,22 @@
+ALGORITHM Dot_Product
+
+
+FUNCTION Dot_Product(A, B: vect) : INTEGER
+    BEGIN
+        RETURN ((A.x)*(B.x) + (A.y)*(B.y)) ; //Defining the scalar product function
+    END
+
+
+VAR
+    vect :	STRUCT
+        x : type;
+        y : type;
+    END_STRUCT  //Defining a vector structure
+
+BEGIN
+    Read(n);
+    FOR i FROM 0 TO n-1 DO
+        Read(A);
+        Read(B);
+        Write(Dot_Product(A,B)); //Calling the variable on the 2 vectors and writing its result
+END
