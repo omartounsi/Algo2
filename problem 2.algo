@@ -9,8 +9,8 @@ FUNCTION Dot_Product(A, B: vect) : INTEGER
 
 VAR
     vect :	STRUCT
-        x : type;
-        y : type;
+        x : INTEGER;
+        y : INTEGER;
     END_STRUCT  //Defining a vector structure
 
 BEGIN
