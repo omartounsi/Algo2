@@ -13,10 +13,13 @@ VAR
         y : INTEGER;
     END_STRUCT  //Defining a vector structure
 
+    A, B: vect;
+
 BEGIN
     Read(n);
     FOR i FROM 0 TO n-1 DO
         Read(A);
         Read(B);
-        Write(Dot_Product(A,B)); //Calling the variable on the 2 vectors and writing its result
+        Write(Dot_Product(A,B));
+    END_FOR
 END
